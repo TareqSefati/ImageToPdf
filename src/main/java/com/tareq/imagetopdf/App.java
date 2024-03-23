@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,6 +20,9 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
+        stage.setTitle("Image To Pdf Converter");
+        stage.getIcons().add(new Image(this.getClass().getResourceAsStream("/images/tsp-rounded-logo.png")));
+        stage.setResizable(false);
         stage.show();
     }
 
